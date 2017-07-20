@@ -12,7 +12,7 @@ const https = require('https');
 https.request = (function(request) {
   return function(_options, cb) {
     let options
-    if (typeof options === 'string') {
+    if (typeof _options === 'string') {
       options = url.parse(_options);
     } else {
       options = Object.assign({}, _options);
